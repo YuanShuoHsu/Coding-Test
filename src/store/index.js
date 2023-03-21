@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-// import searchReducer from "./slice/search"
+import arrangementReducer from "./slice/arrangement"
 
 export const store = configureStore({
     reducer: {
-        // search: searchReducer,
+        arrangement: arrangementReducer,
     },
 })
 
