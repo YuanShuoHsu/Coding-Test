@@ -1,0 +1,15 @@
+.Login {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Login-container {
+        width: 400px;
+        height: 500px;
+        background: cornsilk; 
+    }
+}
