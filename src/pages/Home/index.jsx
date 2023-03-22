@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import "./index.scss"
+import styles from "./index.module.scss"
 
 import Header from '../../components/Header'
 import Login from '../../components/Login'
@@ -19,9 +19,9 @@ export default function Home() {
   }, [login, navigation])
 
   return (
-    <div className='Home'>
+    <div className={styles.home}>
       <Header />
-      <div className='main'>
+      <div className={styles["home__main"]}>
         <Login />
       </div>
     </div>

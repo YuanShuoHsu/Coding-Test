@@ -1,5 +1,5 @@
 import React from 'react'
-import "./index.scss"
+import styles from "./index.module.scss"
 
 import Header from '../../components/Header'
 
@@ -21,15 +21,15 @@ export default function Profile() {
     }
 
     return (
-        <div className='profile'>
+        <div className={styles.profile}>
             <Header />
-            <div className='profile__main'>
-                <p className='main__text'>
-                    <span className='main__text--primary'>{`${t("Wel")}`}</span>
-                    <span className='main__text--secondary'>{`${t("come")}`}</span>
+            <div className={styles["profile__main"]}>
+                <p className={styles["main__text"]}>
+                    <span className={styles["main__text--primary"]}>{`${t("Wel")}`}</span>
+                    <span className={styles["main__text--secondary"]}>{`${t("come")}`}</span>
                 </p>
-                <p className='main__text'>{localStorage.getItem("account")}</p>
-                <button onClick={handleLogout} className='main__button'>登出</button>
+                <p className={styles["main__text"]}>{localStorage.getItem("account")}</p>
+                <button onClick={handleLogout} className={styles["main__button"]}>登出</button>
             </div>
         </div>
     )

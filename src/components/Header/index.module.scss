@@ -1,4 +1,4 @@
-.Header {
+.header {
     position: relative;
     padding: 0 10px;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
         overflow: hidden;
         cursor: pointer;
 
-        .Header__link {
+        .header__link {
             text-decoration: none;
 
             .logo {
