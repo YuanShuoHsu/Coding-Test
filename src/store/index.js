@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import arrangementReducer from "./slice/arrangement"
+import dropdownMenuReducer from "./slice/dropdownMenu"
 
 export const store = configureStore({
     reducer: {
-        arrangement: arrangementReducer,
+        dropdownMenu: dropdownMenuReducer,
     },
 })
 

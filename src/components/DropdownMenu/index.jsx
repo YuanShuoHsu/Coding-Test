@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import "./index.scss"
 
+import { useDispatch } from 'react-redux';
+import { changeDropdownMenu } from '../../store/slice/dropdownMenu';
+
 export default function DropdownMenu() {
+
+  const dispatch = useDispatch();
+
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('中文');
 
@@ -22,9 +28,10 @@ export default function DropdownMenu() {
     };
   }, [dropdownRef]);
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = option => {
     setIsOpen(false);
     setSelectedOption(option);
+    dispatch(changeDropdownMenu(option))
   }
 
   return (
