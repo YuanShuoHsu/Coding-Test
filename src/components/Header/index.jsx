@@ -10,7 +10,7 @@ export default function Header() {
     return (
         <div className='Header'>
             <div className='Header__container'>
-                <Link to={"https://technine.io/zh_hant/"}>
+                <Link className='Header__link' to={"https://technine.io/zh_hant/"}>
                     <img className='logo' src={technine} alt="technine" />
                 </Link>
             </div>

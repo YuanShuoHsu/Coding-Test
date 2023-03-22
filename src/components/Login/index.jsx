@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "./index.scss"
 
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 export default function Login() {
 
-    const dropdownMenu = useSelector(state => state.dropdownMenu.value);
-
-    const { t, i18n } = useTranslation()
-
-    useEffect(() => {
-        i18n.changeLanguage(dropdownMenu)
-    }, [dropdownMenu, i18n])
+    const { t } = useTranslation()
 
     const [account, setAccount] = useState("")
     const [password, setPassword] = useState("")

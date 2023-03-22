@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    value: "tc",
+    value: "",
 }
 
 export const dropdownMenuSlice = createSlice({
@@ -9,16 +9,8 @@ export const dropdownMenuSlice = createSlice({
     initialState,
     reducers: {
         changeDropdownMenu: (state, data) => {
-            switch (data.payload) {
-                case "中文":
-                    state.value = "tc"
-                    break
-                case "English":
-                    state.value = "English"
-                    break
-                default:
-                    break
-            }
+            // state.value = data.payload
+            // localStorage.setItem("locales", JSON.stringify(data.payload))
         },
     },
 })
