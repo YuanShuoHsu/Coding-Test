@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import arrangementReducer from "./slice/arrangement"
+import loginReducer from "./slice/login"
 
 export const store = configureStore({
     reducer: {
-        arrangement: arrangementReducer,
+        login: loginReducer,
     },
 })
 
