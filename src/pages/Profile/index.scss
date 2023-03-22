@@ -27,5 +27,21 @@
                 color: #fea21d;
             }
         }
+
+        .main__button {
+            width: 100px;
+            color: #fff;
+            font: normal normal 16px/40px sans-serif;
+            letter-spacing: 1px;
+            background: #0169BE;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
     }
 }

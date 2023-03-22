@@ -8,9 +8,11 @@ import Profile from './pages/Profile';
 
 import PrivateRoute from "./components/PrivateRoute"
 
+import { useSelector } from 'react-redux';
+
 function App() {
 
-  const isAuthenticated = true; // 假設使用者已經登入，這邊直接設為 true。
+  const login = useSelector(state => state.login.value);
 
   return (
     <Suspense fallback="loading">
@@ -19,14 +21,12 @@ function App() {
           <Route path="" element={<Home />} />
           <Route path="profile">
             <Route path="" element={
-              <PrivateRoute isAuthenticated={isAuthenticated}>
+              <PrivateRoute isAuthenticated={login}>
                 <Profile />
               </PrivateRoute>
-              }
-            />
+            } />
             <Route path="*" element={<Navigate replace to="" />} />
           </Route>
-
           <Route path="*" element={<Navigate replace to="" />} />
         </Routes>
       </div>

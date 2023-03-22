@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 import "./index.scss"
 
 import { useTranslation } from 'react-i18next';
-
-
 import { useNavigate } from "react-router-dom"
 
+import { useDispatch } from 'react-redux';
+import { loginStatus } from '../../store/slice/login';
+
 export default function Login() {
+
+    const dispatch = useDispatch();
 
     const { t } = useTranslation()
 
@@ -21,6 +24,8 @@ export default function Login() {
         event.preventDefault()
         if (account === 'admin' && password === 'Admin&8181') {
             navigation("/profile")
+            dispatch(loginStatus(true))
+            localStorage.setItem("account", account)
         } else {
             setError("invalid")
         }
