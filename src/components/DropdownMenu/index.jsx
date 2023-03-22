@@ -17,7 +17,6 @@ export default function DropdownMenu() {
     setLanguages(Object.keys(resources))
   }, [i18n, selectedOption])
 
-
   const renderOption = option => {
     switch (option) {
       case "zh":

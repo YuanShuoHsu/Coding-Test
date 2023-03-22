@@ -38,6 +38,7 @@
         &--active {
             position: absolute;
             padding: 8px;
+            box-sizing: border-box;
             right: 0;
             bottom: 0;
             width: 40px;
@@ -86,5 +87,12 @@
         &:hover {
             opacity: 0.8;
         }
+    }
+
+    .login__error {
+        margin: 0;
+        color: red;
+        font: normal normal 16px/20px sans-serif;
+        letter-spacing: 1px;
     }
 }
